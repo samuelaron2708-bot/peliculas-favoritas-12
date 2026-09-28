@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario de Matriculación - Bootstrap 5</title>
+  
+  <!-- Bootstrap 5.3 CSS CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light min-vh-100 d-flex flex-column justify-content-between py-4">
+
+  <div class="container my-auto">
+    <div class="row justify-content-center">
+      <div class="col-12 col-lg-10 col-xl-9">
+        
+        <!-- Tarjeta Principal del Formulario -->
+        <div class="card shadow-lg border-0 rounded-4 overflow-hidden">
+          
+          <!-- Encabezado con utilidades Bootstrap -->
+          <div class="card-header bg-primary bg-gradient text-white p-4 p-md-5 text-center position-relative">
+            <span class="badge bg-white text-primary fw-bold text-uppercase px-3 py-2 rounded-pill mb-3 shadow-sm">
+              Sistema Académico
+            </span>
+            <h1 class="display-6 fw-bold mb-2">Registra tus pelicula favorita</h1>
+            <p class="lead mb-0 text-white-50">Samuel quiere saber tus pelis fav :D.</p>
+          </div>
+
+          <!-- Cuerpo del Formulario -->
+          <div class="card-body p-4 p-md-5 bg-white">
+            <form id="matriculaForm" class="needs-validation" novalidate>
+              
+              <!-- SECCIÓN 1: DATOS PERSONALES -->
+              <div class="d-flex align-items-center mb-3 pb-2 border-bottom border-primary-subtle">
+                <div class="badge bg-primary text-white rounded-circle fs-6 me-2 d-flex align-items-center justify-content-center" style="width: 28px; height: 28px;">1</div>
+                <h5 class="card-title text-primary fw-bold mb-0">Datos Personales</h5>
+              </div>
+
+              <div class="row g-3 mb-4">
+                <div class="col-md-6">
+                  <label for="nombres" class="form-label fw-semibold">Nombres <span class="text-danger">*</span></label>
+                  <input type="text" class="form-control form-control-lg fs-6" id="nombres" placeholder="Ej. Juan Carlos" required>
+                  <div class="invalid-feedback">Por favor, ingrese los nombres.</div>
+                </div>
+
+                <div class="col-md-6">
+                  <label for="apellidos" class="form-label fw-semibold">Apellidos <span class="text-danger">*</span></label>
+                  <input type="text" class="form-control form-control-lg fs-6" id="apellidos" placeholder="Ej. Pérez Gómez" required>
+                  <div class="invalid-feedback">Por favor, ingrese los apellidos.</div>
+                </div>
+
+                
+      
+                    
+                    
+            
+
+                <div class="col-md-4">
+                  <label for="fechaNacimiento" class="form-label fw-semibold">Fecha Nacimiento <span class="text-danger">*</span></label>
+                  <input type="date" class="form-control form-control-lg fs-6" id="fechaNacimiento" required>
+                  <div class="invalid-feedback">Seleccione la fecha de nacimiento.</div>
+                </div>
+
+                <div class="col-12">
+                  <label class="form-label fw-semibold d-block">Género <span class="text-danger">*</span></label>
+                  <div class="d-flex flex-wrap gap-4 pt-1">
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="genero" id="generoM" value="Masculino" required>
+                      <label class="form-check-label" for="generoM">Masculino</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="genero" id="generoF" value="Femenino" required>
+                      <label class="form-check-label" for="generoF">Femenino</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="genero" id="generoO" value="Otro" required>
+                      <label class="form-check-label" for="generoO">Otro</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+<!-- SECCIÓN 2: INFORMACIÓN ACADÉMICA -->
+              <div class="d-flex align-items-center mb-3 pb-2 border-bottom border-primary-subtle">
+                <div class="badge bg-primary text-white rounded-circle fs-6 me-2 d-flex align-items-center justify-content-center" style="width: 28px; height: 28px;">3</div>
+                <h5 class="card-title text-primary fw-bold mb-0">Categorias</h5>
+              </div>
+
+              <div class="row g-3 mb-4">
+                <div class="col-md-4">
+                  <label for="nivelGrado" class="form-label fw-semibold">Elige tu categoria favorita<span class="text-danger">*</span></label>
+                  <select class="form-select form-select-lg fs-6" id="nivelGrado" required>
+                    <option value="" selected disabled>Seleccione categoria...</option>
+                    <option value="Primaria - 1° a 3°">Accion y aventura</option>
+                    <option value="Primaria - 4° a 6°">Drama</option>
+                    <option value="Secundaria - 1° a 3°">Comedia</option>
+                    <option value="Secundaria - 4° a 5°">Terror</option>
+                    <option value="Educación Superior">Romance</option>
+                  </select>
+                  <div class="invalid-feedback">Seleccione el nivel académico.</div>
+                </div>
+
+                <div class="col-md-4">
+                  <label for="turno" class="form-label fw-semibold">¿En que momento te gusta ver? <span class="text-danger">*</span></label>
+                  <select class="form-select form-select-lg fs-6" id="turno" required>
+                    <option value="" selected disabled>Seleccione turno...</option>
+                    <option value="Mañana">Mañana (07:30 - 13:00)</option>
+                    <option value="Tarde">Tarde (13:30 - 18:30)</option>
+                    <option value="Noche">Noche (19:00 - 22:30)</option>
+                  </select>
+                  <div class="invalid-feedback">Seleccione un turno.</div>
+                </div>
+
+                
+                </div>
+              </div>
+          
+          
+
+            <!-- SECCIÓN 4: DATOS DEL APODERADO O TUTOR -->
+              <div class="d-flex align-items-center mb-3 pb-2 border-bottom border-primary-subtle">
+                <div class="badge bg-primary text-white rounded-circle fs-6 me-2 d-flex align-items-center justify-content-center" style="width: 28px; height: 28px;">4</div>
+                <h5 class="card-title text-primary fw-bold mb-0">Pelicula que mas te gusta</h5>
+              </div>
+              
+              <div class="row g-3 mb-4">
+                <div class="col-md-5">
+                  <label for="nombreApoderado" class="form-label fw-semibold">Pelicula favorita <span class="text-danger">*</span></label>
+                  <input type="text" class="form-control form-control-lg fs-6" id="nombreApoderado" placeholder="Ej. Ana María Gómez" required>
+                  <div class="invalid-feedback">Ingrese el nombre de la pelicula.</div>
+                </div>
+
+                
+
+              <!-- Terminos y condiciones -->
+              <div class="form-check mb-4">
+                <input class="form-check-input" type="checkbox" id="aceptoTerminos" required>
+                <label class="form-check-label text-secondary small" for="aceptoTerminos">
+                  Declaro que la información proporcionada es verídica y acepto el reglamento institucional. <span class="text-danger">*</span>
+                </label>
+                <div class="invalid-feedback">Debe confirmar la veracidad de la información para proceder.</div>
+              </div>
+
+              <!-- BOTONES DE ACCIÓN -->
+              <div class="d-flex flex-column flex-sm-row justify-content-end gap-3 pt-3 border-top">
+                <button type="button" class="btn btn-outline-secondary btn-lg px-4" id="btnLimpiar">
+                  Limpiar Formulario
+                </button>
+                <button type="submit" class="btn btn-primary bg-gradient btn-lg px-5 fw-semibold shadow-sm">
+                  Registrar Datos
+                </button>
+              </div>
+
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL DE CONFIRMACIÓN / ÉXITO (NATIVO DE BOOTSTRAP 5) -->
+  <div class="modal fade" id="exitoModal" tabindex="-1" aria-labelledby="exitoModalLabel" aria-hidden="true" data-bs-backdrop="static">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content border-0 shadow-lg rounded-4">
+        
+        <div class="modal-header bg-success bg-gradient text-white border-0 py-3">
+          <h5 class="modal-title fw-bold" id="exitoModalLabel">¡Datos Procesados con Éxito!</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+
+        <div class="modal-body p-4">
+          <div class="alert alert-success d-flex align-items-center mb-4" role="alert">
+            <div>
+              El registro se ha guardado correctamente en la base de datos de Samuel.
+            </div>
+          </div>
+
+          <h6 class="fw-bold text-secondary mb-3">Resumen del Registro:</h6>
+          <div class="bg-light p-3 rounded-3 border">
+            <div class="row g-2 small">
+              <div class="col-5 fw-bold text-dark">Nombres y Apellidos:</div>
+              <div class="col-7 text-secondary" id="resumenNombre">-</div>
+
+             
+              <div class="col-5 fw-bold text-dark">Categoria</div>
+              <div class="col-7 text-secondary" id="resumenNivel">-</div>
+
+              <div class="col-5 fw-bold text-dark">Lo ve en la:</div>
+              <div class="col-7 text-secondary" id="resumenTurnoModalidad">-</div>
+
+              <div class="col-5 fw-bold text-dark">Pelicula fav:</div>
+              <div class="col-7 text-secondary" id="resumenApoderado">-</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal-footer border-0 bg-light rounded-bottom-4">
+          <button type="button" class="btn btn-success fw-semibold px-4 w-100" data-bs-dismiss="modal">Finalizar y Aceptar</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap 5 JavaScript Bundle CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Lógica JavaScript para Validaciones y Modal -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const form = document.getElementById('matriculaForm');
+      const btnLimpiar = document.getElementById('btnLimpiar');
+      const exitoModal = new bootstrap.Modal(document.getElementById('exitoModal'));
+
+      // Listener para enviar el formulario y ejecutar validación nativa de Bootstrap
+      form.addEventListener('submit', (event) => {
+        event.preventDefault();
+        event.stopPropagation();
+
+        if (form.checkValidity()) {
+          // Extraer valores para cargar el modal de confirmación
+          const nombres = document.getElementById('nombres').value;
+          const apellidos = document.getElementById('apellidos').value;
+          const tipoDoc = document.getElementById('tipoDoc').value;
+          const numDoc = document.getElementById('numDoc').value;
+          const nivelGrado = document.getElementById('nivelGrado').value;
+          const turno = document.getElementById('turno').value;
+          const modalidad = document.getElementById('modalidad').value;
+          const nombreApoderado = document.getElementById('nombreApoderado').value;
+          const parentesco = document.getElementById('parentesco').value;
+
+          // Renderizar datos en el Modal
+          document.getElementById('resumenNombre').textContent = `${nombres} ${apellidos}`;
+          document.getElementById('resumenDocumento').textContent = `${tipoDoc}: ${numDoc}`;
+          document.getElementById('resumenNivel').textContent = nivelGrado;
+          document.getElementById('resumenTurnoModalidad').textContent = `${turno} (${modalidad})`;
+          document.getElementById('resumenApoderado').textContent = `${nombreApoderado} (${parentesco})`;
+
+          // Mostrar modal de Bootstrap
+          exitoModal.show();
+
+          // Resetear estados del formulario
+          form.reset();
+          form.classList.remove('was-validated');
+        } else {
+          // Agregar clase estándar de Bootstrap para mostrar errores visuales
+          form.classList.add('was-validated');
+
+          // Scroll hacia el primer campo no válido
+          const primerInvalido = form.querySelector(':invalid');
+          if (primerInvalido) {
+            primerInvalido.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          }
+        }
+      }, false);
+
+      // Limpiar formulario y remover clases de validación
+      btnLimpiar.addEventListener('click', () => {
+        form.reset();
+        form.classList.remove('was-validated');
+      });
+    });
+  </script>
+</body>
+</html>
